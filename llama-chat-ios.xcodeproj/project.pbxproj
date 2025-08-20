@@ -6,8 +6,28 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CFB5BD662E56184600044E60 /* llama.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB5BD642E56184000044E60 /* llama.xcframework */; };
+		CFB5BD672E56184600044E60 /* llama.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFB5BD642E56184000044E60 /* llama.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CFB5BD682E56184600044E60 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CFB5BD672E56184600044E60 /* llama.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		CFB5BD222E5606F400044E60 /* llama-chat-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "llama-chat-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB5BD642E56184000044E60 /* llama.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = llama.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB5BD662E56184600044E60 /* llama.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				CFB5BD242E5606F400044E60 /* llama-chat-ios */,
+				CFB5BD602E5617E100044E60 /* Frameworks */,
 				CFB5BD232E5606F400044E60 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +80,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		CFB5BD602E5617E100044E60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFB5BD642E56184000044E60 /* llama.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -68,6 +98,7 @@
 				CFB5BD1E2E5606F400044E60 /* Sources */,
 				CFB5BD1F2E5606F400044E60 /* Frameworks */,
 				CFB5BD202E5606F400044E60 /* Resources */,
+				CFB5BD682E56184600044E60 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +173,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -171,6 +203,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
