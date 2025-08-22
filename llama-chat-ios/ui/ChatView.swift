@@ -14,6 +14,7 @@ struct ChatView: View {
     @State private var multiLineText: String = ""
     @State private var output: String = "Welcome to Llama Chat!\n"
     @FocusState private var textFieldIsFocused: Bool
+    @State private var isThinking = false
     
     init(_ initialiseDelegate: Bool = false) {
         if initialiseDelegate {
@@ -29,12 +30,14 @@ struct ChatView: View {
         multiLineText = ""
         guard let llamaDelegate else { return }
 
+        isThinking = true
         // Because LlamaDelegate is an ObjC class, we dispatch to a global
         // queue to avoid blocking the main thread.
         DispatchQueue.global(qos: .userInitiated).async {
             let response = llamaDelegate.respond(toPrompt: userMessage, usingTemplate: true)!
             DispatchQueue.main.async {
                 output += "\n\(response)\n"
+                isThinking = false
             }
         }
     }
@@ -43,7 +46,7 @@ struct ChatView: View {
         VStack(spacing: 0) {
             // Chat messages area
             ScrollViewReader { proxy in
-                Text("Llama Chat")
+                Text(isThinking ? "Llama Chat 💭" : "Llama Chat 🦙")
                     .font(.largeTitle)
                     .padding(.vertical, 10)
                     .frame(maxWidth: .infinity, alignment: .center)
