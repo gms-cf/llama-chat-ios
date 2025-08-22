@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF9784632E58796B009E99BD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CF9784622E58796B009E99BD /* README.md */; };
 		CFB5BD662E56184600044E60 /* llama.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB5BD642E56184000044E60 /* llama.xcframework */; };
 		CFB5BD672E56184600044E60 /* llama.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFB5BD642E56184000044E60 /* llama.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CF9784622E58796B009E99BD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CFB5BD222E5606F400044E60 /* llama-chat-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "llama-chat-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB5BD642E56184000044E60 /* llama.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = llama.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +68,7 @@
 		CFB5BD192E5606F400044E60 = {
 			isa = PBXGroup;
 			children = (
+				CF9784622E58796B009E99BD /* README.md */,
 				CFB5BD242E5606F400044E60 /* llama-chat-ios */,
 				CFB5BD602E5617E100044E60 /* Frameworks */,
 				CFB5BD232E5606F400044E60 /* Products */,
@@ -153,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF9784632E58796B009E99BD /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
